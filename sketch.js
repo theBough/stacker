@@ -22,10 +22,10 @@ function draw() {
 
 function keyPressed(){
   if(key === 's'){
-    theStack.x = engine.x
-    theStack.y = engine.y
-    theStack.w = engine.w
-    engine.y -= 10
-    theStack.h += 10
+    engine.w -= theStack.x - engine.x
+    engine.x = theStack.x
+    engine.y -= engineHeight;
+    theStack.h += engineHeight;
+    theStack.y -= engineHeight;
   }
 }
