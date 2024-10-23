@@ -11,12 +11,15 @@ function draw() {
   background("#252422");
   firstBlock.display()
   firstBlock.bounce()
-  theStack.display()
-  
+  theStack.display()  
 }
 
-function keyIsPressed(){
+function keyPressed(){
   if(key === 's'){
-    
+    theStack.x = firstBlock.x
+    theStack.y = firstBlock.y
+    theStack.w = firstBlock.w
+    firstBlock.y -= 10
+    theStack.h += 10
   }
 }
