@@ -1,10 +1,10 @@
-function Block(x,y,w,h,colour){
+function Block(x,y,w,h,colour,speed){
   this.x = x;
   this.y = y
   this.w = w
   this.h = h
   this.colour = colour;
-  this.speed  = 1;
+  this.speed  = speed;
   
   this.display = function(){
     push()
