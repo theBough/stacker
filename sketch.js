@@ -5,12 +5,12 @@ let engineHeight
 let engineSpeed
 
 function setup() {
-  engineWidth = 10
+  engineWidth = 100
   engineHeight = 30
-  engineSpeed = 5
+  engineSpeed = 1
   createCanvas(400, 400);
-  engine = new Block(0,height-engineHeight*2,engineWidth,engineHeight,"#eb5e28",engineSpeed)
-  theStack = new Block(100,height-engineHeight,engineWidth,engineHeight,"#ccc5b9")
+  engine = new Block(0,height-engineHeight*6,engineWidth,engineHeight,"#eb5e28",engineSpeed)
+  theStack = new Block(100,height-engineHeight*5,engineWidth,engineHeight*5,"#ccc5b9")
 }
 
 function draw() {
