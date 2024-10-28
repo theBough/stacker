@@ -33,9 +33,10 @@ function keyPressed(){
     engine.y -= engineHeight;
     //theStack.h += engineHeight;
     //theStack.y -= engineHeight;
-    theStack.push (new Block(theStack[theStack.length -1].x ,
+    
+    theStack.push (new Block(theStack[0].x,
                   engine.y+engineHeight,
-                  theStack[theStack.length -1].x - (engine.x+engine.w),
+                  Math.abs(theStack[theStack.length -1].x - (engine.x+engine.w)),
                   engineHeight,
                   "#ccc5b9"
                  ))
