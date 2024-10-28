@@ -1,5 +1,5 @@
 let engine;
-let theStack
+let theStack = [];
 let engineWidth;
 let engineHeight
 let engineSpeed
@@ -10,14 +10,17 @@ function setup() {
   engineSpeed = 1
   createCanvas(400, 400);
   engine = new Block(0,height-engineHeight*6,engineWidth,engineHeight,"#eb5e28",engineSpeed)
-  theStack = new Block(100,height-engineHeight*5,engineWidth,engineHeight*5,"#ccc5b9")
+  theStack.push(new Block(100,height-engineHeight*5,engineWidth,engineHeight*5,"#ccc5b9"))
 }
 
 function draw() {
   background("#252422");
   engine.display()
   engine.bounce()
-  theStack.display()  
+  for(i=0; i< theStack.length; i++){
+    theStack[i].display()  
+  }
+  
 }
 
 function keyPressed(){
@@ -27,5 +30,6 @@ function keyPressed(){
     engine.y -= engineHeight;
     theStack.h += engineHeight;
     theStack.y -= engineHeight;
+    
   }
 }
