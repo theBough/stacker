@@ -7,10 +7,13 @@ let engineSpeed
 function setup() {
   engineWidth = 100
   engineHeight = 30
-  engineSpeed = 1
+  engineSpeed = 0.5
   createCanvas(400, 400);
   engine = new Block(0,height-engineHeight*6,engineWidth,engineHeight,"#eb5e28",engineSpeed)
-  theStack.push(new Block(100,height-engineHeight*5,engineWidth,engineHeight*5,"#ccc5b9"))
+  theStack.push(new Block(100,height-engineHeight*5,
+                          engineWidth,
+                          engineHeight*5,
+                          "#ccc5b9"))
 }
 
 function draw() {
@@ -30,6 +33,12 @@ function keyPressed(){
     engine.y -= engineHeight;
     //theStack.h += engineHeight;
     //theStack.y -= engineHeight;
+    theStack.push (new Block(theStack[theStack.length -1].x ,
+                  engine.y+engineHeight,
+                  theStack[theStack.length -1].x - (engine.x+engine.w),
+                  engineHeight,
+                  "#ccc5b9"
+                 ))
     
   }
 }
