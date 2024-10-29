@@ -28,18 +28,7 @@ function draw() {
 
 function keyPressed(){
   if(key === 's'){
-    engine.w -= theStack[theStack.length -1].x - engine.x
-    engine.x = theStack[theStack.length -1].x
-    engine.y -= engineHeight;
-    //theStack.h += engineHeight;
-    //theStack.y -= engineHeight;
-    
-    theStack.push (new Block(theStack[0].x,
-                  engine.y+engineHeight,
-                  Math.abs(theStack[theStack.length -1].x - (engine.x+engine.w)),
-                  engineHeight,
-                  "#ccc5b9"
-                 ))
-    
+    checkLeft();
+    checkRight();
   }
 }
