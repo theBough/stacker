@@ -7,5 +7,7 @@ function isWin(){
         200,
         200)
     pop()
+    //stop the engine 
+    engine.speed = 0;
   }
 }
