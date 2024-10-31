@@ -8,12 +8,12 @@ function Block(x,y,w,h,colour,speed){
   
   this.display = function(){
     push()
-    fill(this.colour)
+    fill(random(255),random(255),random(255))
     rect(this.x, this.y, this.w, this.h)
     pop()
   }//end display
   
-  this.bounce  =function(){
+  this.bounce=function(){
     //move the block left and right.
     this.x += this.speed
     if(this.x <= 0 || this.x + this.w >= width){
