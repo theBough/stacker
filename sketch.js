@@ -8,14 +8,14 @@ let outputMessage;
 
 function setup() {
   gameOver = false;
-  engineWidth = 100
+  engineWidth = 200
   engineHeight = 30
   engineSpeed = 10
   createCanvas(400, 400);
   engine = new Block(0,height-engineHeight*2,engineWidth,engineHeight,"#eb5e28",engineSpeed)
   theStack.push(new Block(100,
                           height-engineHeight,
-                          engineWidth*2,
+                          engineWidth,
                           engineHeight*5,
                           "#ccc5b9"))
 }
