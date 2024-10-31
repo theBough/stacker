@@ -1,23 +1,12 @@
-let outputMessage;
+
 function isWinOrIsLose(){
   let lastStack = theStack.length - 1;
   if(engine.y<0){
-    
       outputMessage = "Congratulations\n you just won\n an iPod mini"
-   
-      outputMessage = "Wow you suck!"
-  
-    push()
-    fill("#fffcf2");
-    textSize(25)
-    text(outputMessage,
-        200,
-        200)
-    pop()
     //stop the engine 
     engine.speed = 0;
-  }
-  if(
+    gameOver = true
+  }else if(
       (engine.x < theStack[lastStack].x &&
       engine.x + engine.w < theStack[lastStack].x
        ) ||
@@ -28,14 +17,8 @@ function isWinOrIsLose(){
     ){
      outputMessage = "Wow you suck!"
   
-    push()
-    fill("#fffcf2");
-    textSize(25)
-    text(outputMessage,
-        200,
-        200)
-    pop()
     //stop the engine 
     engine.speed = 0;
+    gameOver = true
   }
 }
