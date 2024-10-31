@@ -23,12 +23,13 @@ function draw() {
   for(i=0; i< theStack.length; i++){
     theStack[i].display()  
   }
- isWinOrIsLose();
+ 
 }
 
 function keyPressed(){
   if(key === 's'){
     checkLeft();
     checkRight();
+    isWinOrIsLose();
   }
 }
