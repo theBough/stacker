@@ -2,7 +2,7 @@ function gameStart(){
    gameOver = false;
   engineWidth = 200
   engineHeight = 30
-  engineSpeed = 10
+  engineSpeed = 5
  
   engine = new Block(0,height-engineHeight*2,engineWidth,engineHeight,"#eb5e28",engineSpeed)
   theStack.push(new Block(100,
