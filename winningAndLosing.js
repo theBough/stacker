@@ -22,3 +22,13 @@ function isWinOrIsLose(){
     gameOver = true
   }
 }
+
+function gameIsOver(){
+  push()
+    fill("#fffcf2");
+    textSize(25)
+    text(outputMessage,
+        200,
+        200)
+    pop()
+}
