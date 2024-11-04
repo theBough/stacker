@@ -4,20 +4,11 @@ let engineWidth;
 let engineHeight
 let engineSpeed
 let gameOver;
-let outputMessage;
+
 
 function setup() {
-  gameOver = false;
-  engineWidth = 200
-  engineHeight = 30
-  engineSpeed = 10
-  createCanvas(400, 400);
-  engine = new Block(0,height-engineHeight*2,engineWidth,engineHeight,"#eb5e28",engineSpeed)
-  theStack.push(new Block(100,
-                          height-engineHeight,
-                          engineWidth,
-                          engineHeight*5,
-                          "#ccc5b9"))
+   createCanvas(400, 400);
+   gameStart()
 }
 
 function draw() {
