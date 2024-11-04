@@ -44,3 +44,18 @@ function checkRight() {
     );
   }
 }
+function checkPerfect() {
+  let lastStack = theStack.length - 1;
+  if (engine.x == theStack[lastStack].x && engine.w == theStack[lastStack].w) {
+    engine.y -= engineHeight;
+    theStack.push(
+      new Block(
+        engine.x,
+        engine.y + engineHeight,
+        engine.w,
+        engineHeight,
+        "#ccc5b9"
+      )
+    );
+  }
+}
