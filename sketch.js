@@ -28,6 +28,8 @@ function keyPressed(){
   if(key === 's'){
     checkLeft();
     checkRight();
+    checkPerfect();
     isWinOrIsLose();
+    engineSpeed+=1
   }
 }
