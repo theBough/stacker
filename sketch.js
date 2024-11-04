@@ -8,6 +8,7 @@ let gameOver;
 
 function setup() {
    createCanvas(400, 400);
+  myFont = loadFont("rubix.ttf")
    gameStart()
 }
 
@@ -16,6 +17,7 @@ function draw() {
   interface();
   engine.display()
   engine.bounce()
+ 
   for(i=0; i< theStack.length; i++){
     theStack[i].display()  
   }
@@ -25,6 +27,18 @@ function draw() {
  
 }
 
+function mouseClicked(){
+   checkPerfect();
+    checkLeft();
+    checkRight();
+    isWinOrIsLose();
+    if(engine.speed > 0){
+      engine.speed+=1
+    }else{
+      engine.speed-=1
+    }
+    level +=1
+}
 function keyPressed(){
   if(key === 's'){
     checkPerfect();
@@ -36,6 +50,6 @@ function keyPressed(){
     }else{
       engine.speed-=1
     }
-    
+    level +=1
   }
 }
