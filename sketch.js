@@ -12,7 +12,8 @@ function setup() {
 }
 
 function draw() {
-  background("#252422");
+  background("#14213d");
+  interface();
   engine.display()
   engine.bounce()
   for(i=0; i< theStack.length; i++){
