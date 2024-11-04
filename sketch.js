@@ -26,10 +26,15 @@ function draw() {
 
 function keyPressed(){
   if(key === 's'){
+    checkPerfect();
     checkLeft();
     checkRight();
-    checkPerfect();
     isWinOrIsLose();
-    engineSpeed+=1
+    if(engine.speed > 0){
+      engine.speed+=1
+    }else{
+      engine.speed-=1
+    }
+    
   }
 }
